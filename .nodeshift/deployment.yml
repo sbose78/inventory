@@ -3,15 +3,19 @@ spec:
     spec:
       containers:
       - env:
+        - name: DB_NAME
+          value: "" # binding need to inject this
+        - name: MY_DATABASE_SERVICE_HOST
+          value: "" # binding need to inject this
         - name: DB_USERNAME
           valueFrom:
              secretKeyRef:
-               name: my-database-secret
+               name: "" # binding need to inject this
                key: user
-        - name: DB_PASSWORD
+        - name: DB_PASSWORD  
           valueFrom:
              secretKeyRef:
-               name: my-database-secret
+               name: "" # binding need to inject this
                key: password
         readinessProbe:
           httpGet:
