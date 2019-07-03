@@ -3,16 +3,22 @@ spec:
     spec:
       containers:
       - env:
-        - name: DB_USERNAME
+        - name: SERVICE_BINDING_DATABASE_DBNAME
+          value: "..."
+        - name: SERVICE_BINDING_DATABASE_DBCONNECTIONIP
+          value: "..."
+        - name: SERVICE_BINDING_DATABASE_DBCONNECTIONPORT
+          value: "..."
+        - name: SERVICE_BINDING_DATABASE_SECRET_USER
           valueFrom:
-             secretKeyRef:
-               name: my-database-secret
-               key: user
-        - name: DB_PASSWORD
+            secretKeyRef:
+              name: "..."
+              key: user
+        - name: SERVICE_BINDING_DATABASE_SECRET_PASSWORD
           valueFrom:
-             secretKeyRef:
-               name: my-database-secret
-               key: password
+            secretKeyRef:
+              name: "..."
+              key: password
         readinessProbe:
           httpGet:
             path: /api/health/readiness
