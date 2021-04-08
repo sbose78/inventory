@@ -2,7 +2,7 @@
 
 Example CRUD Application..
 
-### Getting Started
+### Getting Started!
 
 #### Running Locally
 
