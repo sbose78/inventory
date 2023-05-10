@@ -4,7 +4,7 @@ Example CRUD Application
 
 ### Getting Started!
 
-#### Running Locally
+#### Running Locally.
 
 First, install the dependencies
 
